@@ -126,7 +126,3 @@ class ActivityTest < Minitest::Test
   end
 
 end
-
-=begin README
-
-=end
