@@ -11,4 +11,9 @@ class Activity
     @participants << participant
   end
 
+  def total_cost
+    @participants.map do |participant|
+      participant[:amt_paid]
+    end.reduce(:+)
+  end
 end

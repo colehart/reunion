@@ -53,12 +53,16 @@ class ActivityTest < Minitest::Test
     activity.add_participants(julie)
     assert_equal [{name: "Jack Bennet", amt_paid: 14}, {name: "Julie Smith", amt_paid: 5}], activity.participants
   end
+
+  def test_can_evaluate_the_total_cost_of_an_activity
+    activity = Activity.new("bowling")
+    activity.add_participants({name: "Jack Bennet", amt_paid: 14})
+    activity.add_participants({name: "Julie Smith", amt_paid: 5})
+
+    assert_equal 19, activity.total_cost
+  end
 end
 
 =begin README
-# An Activity has a name, such as 'hiking'
-# An Activity has participants
-  - participants are represented with a hash and have a name and an amount they've paid for that activity
-# You can add participants to an Activity
-You can evaluate the total cost of an activity
+
 =end
