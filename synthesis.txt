@@ -1,0 +1,30 @@
+What do you think we were trying to get you to learn with this challenge?
+It was really annoying to not have the Activity cost preset to measure what you're splitting against. Is Iteration 0 missing? Are these donation-based activities? If so, you wouldn't split up the cost between the participants/they'd be sliding scale and you'd just sum them and amount paid is Activity cost.
+
+The spec only says:
+"This will track how much each person spent on a particular activity, how much each person owes across all activities, and ultimately print out a summary of how much each person owes or is owed."
+
+I get where people might spot others by making a reservation for a group and having it charge to one credit card, and you would have different costs associated with different activities and have different folks who opt into one activity or another. This is where the scant framing in the breaks down. The folks who participated in one activity should pay for that activity. The wording of the iteration doesn't make sense.
+
+Real world, I'd assume you'd be able to ask the client or project manager for clarification, but because this is an independent exercise where we would have been in a silent classroom typing away, I'm assuming (perhaps incorrectly) that we can't ask for clarification.
+
+So, the questions/decision points are:
+  - do we assume everyone at the getaway/vacation/reunion participates in all the activities? Or, do is it voluntary/not mando/piecemeal?
+  - does only one person pay for each activity, then split that total cost between that activity's specific participants?
+  - then are we totaling up each activity's costs as a total cost, averaging per amt of participants?
+
+My guess is, overall, this exercise is meant to teach us:
+
+  -repetition of basic concepts,
+  -making up a story that makes sense to you about use-cases
+  -decision-making in the absence of clear guidance,
+  -comfort with discomfort, and
+  -moving forward in the face of uncertainty.
+
+Outline in words (at least 5-6 sentences) what your code is doing in order to solve this problem.
+
+What was the most difficult portion of this for you?
+Not having a clear spec, but not realizing it until Iteration 2 and getting frustrated about the lack of clarity.
+
+What came naturally to you?
+TDD.
