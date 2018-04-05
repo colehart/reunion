@@ -1,9 +1,11 @@
 class Activity
   attr_reader :name,
+              :price,
               :participants
 
-  def initialize(activity_name)
+  def initialize(activity_name, price = 0.00)
     @name = activity_name
+    @price = price.round(2)
     @participants = []
   end
 
@@ -11,9 +13,14 @@ class Activity
     @participants << participant
   end
 
-  def total_cost
+  def total_paid
     @participants.map do |participant|
       participant[:amt_paid]
-    end.reduce(:+)
+    end.reduce(:+).round(2)
   end
+
+  def fair_share
+    (@price / @participants.count).round(2)
+  end
+
 end
