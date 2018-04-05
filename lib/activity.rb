@@ -19,6 +19,10 @@ class Activity
     end.reduce(:+).round(2)
   end
 
+  def books_balanced?
+    total_paid == @price
+  end
+
   def fair_share
     (@price / @participants.count).round(2)
   end

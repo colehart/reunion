@@ -1,24 +1,6 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/colehart/turing/1module/reunion/lib/reunion.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        8,
-        8,
-        null,
-        null,
-        1,
-        null,
-        6,
-        2,
-        null,
-        null,
-        null
-      ],
       "/Users/colehart/turing/1module/reunion/lib/activity.rb": [
         1,
         1,
@@ -26,32 +8,36 @@
         null,
         null,
         1,
-        10,
-        10,
-        10,
+        14,
+        14,
+        14,
         null,
         null,
         1,
-        0,
+        20,
         null,
         null,
         1,
         null,
-        0,
-        0,
+        6,
+        3,
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        0,
+        8,
+        null,
+        null,
+        1,
+        6,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1522971370
+    "timestamp": 1522972199
   }
 }

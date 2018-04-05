@@ -65,6 +65,22 @@ class ActivityTest < Minitest::Test
     assert_equal 120.00, activity.total_paid
   end
 
+  def test_can_check_balance_total_paid_and_activity_cost
+    activity = Activity.new("bowling", 60.00)
+    activity.add_participants({name: "Jack Bennet", amt_paid: 120.00})
+    activity.add_participants({name: "Julie Smith", amt_paid: 0.00})
+
+    refute activity.books_balanced?
+  end
+
+  def test_can_check_balance_total_paid_and_activity_cost
+    activity = Activity.new("bowling", 120.00)
+    activity.add_participants({name: "Jack Bennet", amt_paid: 120.00})
+    activity.add_participants({name: "Julie Smith", amt_paid: 0.00})
+
+    assert activity.books_balanced?
+  end
+
   def test_can_evenly_split_the_cost_of_an_activity
     activity = Activity.new("bowling", 60.00)
 
