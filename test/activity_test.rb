@@ -36,30 +36,38 @@ class ActivityTest < Minitest::Test
 
   def test_participants_populates_with_different_participant
     activity = Activity.new("bowling")
-    daniel = {name: "Daniel Slater", amt_paid: 7}
+    daniel = {name: "Daniel Slater", amt_paid: 5}
     activity.participants << daniel
-    assert_equal [{name: "Daniel Slater", amt_paid: 7}], activity.participants
+    assert_equal [{name: "Daniel Slater", amt_paid: 5}], activity.participants
   end
 
   def test_can_add_multiple_participants
     activity = Activity.new("bowling")
-    jack = {name: "Jack Bennet", amt_paid: 14}
+    jack = {name: "Jack Bennet", amt_paid: 5}
 
     activity.add_participants(jack)
-    assert_equal [{name: "Jack Bennet", amt_paid: 14}], activity.participants
+    assert_equal [{name: "Jack Bennet", amt_paid: 5}], activity.participants
 
     julie = {name: "Julie Smith", amt_paid: 5}
 
     activity.add_participants(julie)
-    assert_equal [{name: "Jack Bennet", amt_paid: 14}, {name: "Julie Smith", amt_paid: 5}], activity.participants
+    assert_equal [{name: "Jack Bennet", amt_paid: 5}, {name: "Julie Smith", amt_paid: 5}], activity.participants
   end
 
   def test_can_evaluate_the_total_cost_of_an_activity
     activity = Activity.new("bowling")
-    activity.add_participants({name: "Jack Bennet", amt_paid: 14})
+    activity.add_participants({name: "Jack Bennet", amt_paid: 5})
     activity.add_participants({name: "Julie Smith", amt_paid: 5})
 
-    assert_equal 19, activity.total_cost
+    assert_equal 10, activity.total_cost
+  end
+
+  def test_can_evaluate_a_different_total_cost_of_an_activity
+    activity = Activity.new("bowling")
+    activity.add_participants({name: "Jack Bennet", amt_paid: 10})
+    activity.add_participants({name: "Julie Smith", amt_paid: 10})
+
+    assert_equal 20, activity.total_cost
   end
 end
 
