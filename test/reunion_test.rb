@@ -1,6 +1,4 @@
-require 'minitest'
-require 'minitest/test'
-require 'minitest/autorun'
+require "./test/test_helper"
 require './lib/reunion'
 
 class ReunionTest < Minitest::Test
