@@ -23,4 +23,8 @@ class Activity
     (@price / @participants.count).round(2)
   end
 
+  def what_do_you_owe(participant)
+    (fair_share - participant[:amt_paid]).round(2)
+  end
+
 end

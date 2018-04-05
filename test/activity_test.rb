@@ -79,8 +79,8 @@ class ActivityTest < Minitest::Test
     assert_equal 20.00, activity.fair_share
   end
 
-  def test_can_evenly_split_the_cost_of_an_activity
-    activity = Activity.new("bowling", 70.00)
+  def test_can_evenly_split_the_cost_of_another_activity
+    activity = Activity.new("going to arcade", 70.00)
 
     julie = {name: "Julie Smith", amt_paid: 0.00}
     jack = {name: "Jack Bennet", amt_paid: 70.00}
@@ -93,13 +93,40 @@ class ActivityTest < Minitest::Test
     assert_equal 23.33, activity.fair_share
   end
 
+  def test_can_evaluate_what_each_owe_per_activity
+    activity = Activity.new("bowling", 60.00)
+
+    julie = {name: "Julie Smith", amt_paid: 0.00}
+    jack = {name: "Jack Bennet", amt_paid: 0.00}
+    daniel = {name: "Daniel Slater", amt_paid: 60.00}
+
+    activity.add_participants(julie)
+    activity.add_participants(jack)
+    activity.add_participants(daniel)
+
+    assert_equal 20.00, activity.what_do_you_owe(julie)
+    assert_equal 20.00, activity.what_do_you_owe(jack)
+    assert_equal -40.00, activity.what_do_you_owe(daniel)
+  end
+
+  def test_can_evaluate_what_each_owe_per_diff_activity
+    activity = Activity.new("curling", 450.00)
+
+    julie = {name: "Julie Smith", amt_paid: 20.00}
+    jack = {name: "Jack Bennet", amt_paid: 200.00}
+    daniel = {name: "Daniel Slater", amt_paid: 230.00}
+
+    activity.add_participants(julie)
+    activity.add_participants(jack)
+    activity.add_participants(daniel)
+
+    assert_equal 130.00, activity.what_do_you_owe(julie)
+    assert_equal -50.00, activity.what_do_you_owe(jack)
+    assert_equal -80.00, activity.what_do_you_owe(daniel)
+  end
+
 end
 
 =begin README
-Add to the Activity class so that it supports the following functionality. Note, it is assumed that the cost of each activity is split evenly between all participants.
 
-  You can split the cost of an activity
-  You can evaluate out how much each person is owed/owes
-    - If a participant paid less than their fair share they owe a positive amount.
-    - If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).
 =end
