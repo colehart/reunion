@@ -4,7 +4,7 @@ It was really annoying to not have the Activity cost preset to measure what you'
 The spec only says:
 "This will track how much each person spent on a particular activity, how much each person owes across all activities, and ultimately print out a summary of how much each person owes or is owed."
 
-I get where people might spot others by making a reservation for a group and having it charge to one credit card, and you would have different costs associated with different activities and have different folks who opt into one activity or another. This is where the scant framing in the breaks down. The folks who participated in one activity should pay for that activity. The wording of the iteration doesn't make sense.
+I get where people might spot others by making a reservation for a group and having it charge to one credit card, and you would have different costs associated with different activities and have different folks who opt into one activity or another. This is where the scant framing in the spec breaks down. The folks who participated in one activity should pay for that activity. The wording of the iteration doesn't make sense.
 
 Real world, I'd assume you'd be able to ask the client or project manager for clarification, but because this is an independent exercise where we would have been in a silent classroom typing away, I'm assuming (perhaps incorrectly) that we can't ask for clarification.
 
@@ -22,9 +22,10 @@ My guess is, overall, this exercise is meant to teach us:
   -moving forward in the face of uncertainty.
 
 Outline in words (at least 5-6 sentences) what your code is doing in order to solve this problem.
+My code completes iterations 1 through 3 of the exercise spec, creating the ability for a user/developer to utilize this app to calculate totals and balance their virtual checkbooks when planning a getaway trip with friends and family. Users can create as many unique activities for the trip as they want, including key aspects like activity name and price, participants, and what each participant paid toward the total cost of the activity, making it easy to settle up at the end of a fun vacation where folks don't want to think about the price tag til the end. The app tracks the total cost of the reunion/getaway and future iterations will provide an itemized receipt of all activities and what each participant paid overall to figure out who owes who when you're heading back to real life.
 
 What was the most difficult portion of this for you?
 Not having a clear spec, but not realizing it until Iteration 2 and getting frustrated about the lack of clarity.
 
 What came naturally to you?
-TDD.
+TDD. I'm getting more familiar with when to use hashes their enumerables because of doing the ruby exercises and working on hashes with my mentor. Once I got into the coding/understood why/for what use I was doing the spec, the coding came easy.
